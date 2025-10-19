@@ -1,0 +1,258 @@
+.step {
+	position: absolute;
+	top: 50%;
+    
+	width: 6%;
+	left: 1.5%;
+	transform: translateY(-138%);
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background-color: #FFF;
+
+	font-family: var(--font-family-main);
+	font-size: clamp(1px, 42/1516 * 100vh, 42px);
+	box-shadow: inset 0px 0px 0.5vh rgba(4, 53, 126, 0.8);
+	border: 0.37vh solid #003676;
+	outline: 0.45vh solid #FFF;
+	// transition-duration: var(--transition-duration);
+
+	@media (max-aspect-ratio:2048/1516) {
+		font-size: clamp(1px, 42/2048 * 100vw, 42px);
+		border: 0.37vw solid #003676;
+		outline: 0.45vw solid #FFF;
+		box-shadow: inset 0px 0px 0.5vw rgba(4, 53, 126, 0.8);
+	}
+	@include tablet {
+		border: 2px solid #003676;
+	}
+
+	@include mobile {
+		border: 1px solid #003676;
+		outline: 1px solid #FFF;
+		box-shadow: inset 0px 0px 2px rgba(4, 53, 126, 0.8);
+	}
+
+	text-transform: uppercase;
+	justify-content: center;
+	align-items: center;
+
+	transition-duration: var(--transition-duration);
+	z-index: 100;
+
+
+	&:hover {
+		width: 6.7%;
+		left: 1.2%;
+		transform: translateY(-125%);
+	}
+
+	&:active {
+		background-color: #e6e9ed;
+	}
+}
+
+.step-start {
+	width: 8%;
+	left: 9.5%;
+	transform: translateY(-385%);
+	font-size: clamp(1px, 52/1516 * 100vh, 52px);
+	color: #9e1818;
+
+	@media (max-aspect-ratio:2048/1516) {
+		font-size: clamp(1px, 52/2048 * 100vw, 52px);
+	}
+
+	&:hover {
+		width: 9%;
+		left: 9.4%;
+		transform: translateY(-350%);
+		font-size: clamp(1.2px, 61/1516 * 100vh, 61px);
+	}
+}
+
+.step-vocal {
+	left: 2.5%;
+	transform: translateY(144%);
+
+	&:hover {
+		width: 6.7%;
+		left: 2.2%;
+		transform: translateY(131%);
+	}
+}
+
+.step-turizm {
+	left: 5%;
+	transform: translateY(413%);
+	font-size: clamp(1px, 38/1516 * 100vh, 38px);
+
+	@media (max-aspect-ratio:2048/1516) {
+		font-size: clamp(1px, 38/2048 * 100vw, 38px);
+	}
+
+	&:hover {
+		transform: translateY(370%);
+		width: 6.7%;
+		left: 4.7%;
+	}
+}
+
+.step-borba {
+	left: 29%;
+	transform: translateY(397%);
+	font-size: clamp(1px, 38/1516 * 100vh, 38px);
+
+	@media (max-aspect-ratio:2048/1516) {
+		font-size: clamp(1px, 38/2048 * 100vw, 38px);
+	}
+
+	&:hover {
+		transform: translateY(350%);
+		width: 6.7%;
+		left: 28.7%;
+	}
+}
+
+.step-preschool {
+	width: 6.2%;
+	left: 67%;
+	transform: translateY(7%);
+	font-size: clamp(1px, 32/1516 * 100vh, 32px);
+	text-align: center;
+	line-height: 1.1;
+
+	@media (max-aspect-ratio:2048/1516) {
+		font-size: clamp(1px, 32/2048 * 100vw, 32px);
+	}
+
+	&:hover {
+		width: 6.9%;
+		left: 66.7%;
+		transform: translateY(0%);
+	}
+}
+
+.step-volleyball {
+	left: 45%;
+	transform: translateY(430%);
+	font-size: clamp(1px, 30/1516 * 100vh, 30px);
+
+	@media (max-aspect-ratio:2048/1516) {
+		font-size: clamp(1px, 30/2048 * 100vw, 30px);
+	}
+
+	&:hover {
+		width: 6.7%;
+		left: 44.7%;
+		transform: translateY(380%);
+	}
+}
+
+.step-football {
+	left: 68%;
+	transform: translateY(405%);
+	font-size: clamp(1px, 38/1516 * 100vh, 38px);
+
+	@media (max-aspect-ratio:2048/1516) {
+		font-size: clamp(1px, 38/2048 * 100vw, 38px);
+	}
+
+	&:hover {
+		width: 6.7%;
+		left: 67.7%;
+		transform: translateY(362%);
+	}
+}
+
+.step-ecology {
+	left: 87%;
+	transform: translateY(417%);
+	font-size: clamp(1px, 30/1516 * 100vh, 30px);
+
+	@media (max-aspect-ratio:2048/1516) {
+		font-size: clamp(1px, 30/2048 * 100vw, 30px);
+	}
+
+	&:hover {
+		transform: translateY(367%);
+		width: 6.7%;
+		left: 86.7%;
+	}
+}
+
+.step-robots {
+	left: 92%;
+	transform: translateY(156%);
+	font-size: clamp(1px, 32/1516 * 100vh, 32px);
+	text-align: center;
+	line-height: 1.1;
+
+	@media (max-aspect-ratio:2048/1516) {
+		font-size: clamp(1px, 32/2048 * 100vw, 32px);
+	}
+
+	&:hover {
+		width: 6.7%;
+		left: 92%;
+		transform: translateY(140%);
+	}
+}
+
+.step-dpi {
+	left: 84.5%;
+	transform: translateY(-9%);
+
+	&:hover {
+		width: 6.7%;
+		left: 84.2%;
+		transform: translateY(-15%);
+	}
+}
+
+.step-games {
+
+	left: 71%;
+	transform: translateY(-535%);
+	font-size: clamp(1px, 39/1516 * 100vh, 39px);
+
+	@media (max-aspect-ratio:2048/1516) {
+		font-size: clamp(1px, 39/2048 * 100vw, 39px);
+	}
+	
+	&:hover {
+		width: 6.7%;
+		left: 70.7%;
+		transform: translateY(-490%);
+	}
+}
+
+.step-chess {
+
+	left: 61%;
+	transform: translateY(-137%);
+
+	font-size: clamp(1px, 30/1516 * 100vh, 30px);
+
+	@media (max-aspect-ratio:2048/1516) {
+		font-size: clamp(1px, 30/2048 * 100vw, 30px);
+	}
+
+	&:hover {
+		transform: translateY(-130%);
+		width: 6.7%;
+		left: 60.7%;
+	}
+}
+
+@keyframes jump-href {
+	to {top: 49%;}
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,50 @@
+:root {
+    --color-light: #FFFFFF;
+
+    --color-dark: #1D1D1F;
+    --color-nav: rgba(39, 39, 39, 0.05);
+    --color-nav-dark: rgba(39, 39, 39, 0.20);
+
+    --color-gray-text: #686870;
+    --color-gray: #86868B;
+    --color-gray-alt: #9E9E9E;
+    --color-gray-border: #D2D2D7;
+    --color-gray-graund: #F5F5F7;
+
+    
+    --color-accent: #00CC2D;
+    --color-accent-hot: #FF6633;
+
+    --color-accent-green: #84C502;
+
+    --color-accent-bg: #CCF5D5;
+    --color-accent-hot-bg: #FBDCD5;
+ 
+
+
+    --border: 1px solid var(--color-gray-border);
+    --border-radius: 14px;
+    --border-radius-small: 7px;
+    --border-radius-large: 45px;
+
+    --shadow: 0 5px 0 0 var(--color-dark);
+    
+    --font-family-base: "Inter", sans-serif;
+    --font-family-logo: "Shanghai", sans-serif;
+    --font-family-main: "DINCondensedC", sans-serif;
+
+	--font-size-step: 15px;
+	--font-size-step2: 16px;
+	--otstup: 16px;
+
+
+    --container-width: 1100px;
+    --container-padding-x: 0px;
+
+    // --section-padding-y: 70px;
+    // --input-height: 59px;
+    // --button-height: 68px;
+    --transition-duration: 0.2s;
+
+}
+

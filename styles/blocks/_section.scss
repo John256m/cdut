@@ -1,0 +1,98 @@
+.main-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	background: linear-gradient(to bottom,  #d4d7de 50%, #008dd2 50%)
+}
+
+.image-wrapper {
+	display: flex;
+	position: relative;
+	height: 100vh;
+	align-items: center;
+}
+
+.image-bg {
+	max-height: 100%;
+	width: auto;		
+}
+
+.image-lozung {
+	position: absolute;
+	top: 50%;
+    left: 50%;
+	width: 100%;
+	translate: -48.8% 490%;
+	
+	text-align: center;
+	color: #FFF;
+
+	font-family: var(--font-family-base);
+	font-weight: 500;
+	font-size: clamp(10px, 85/1516 * 100vh, 85px);
+	text-shadow: 0 3px 6px #000; 
+
+	@media (max-aspect-ratio:2048/1516) {
+		font-size: clamp(1px, 85/2048 * 100vw, 85px);
+	}
+
+	justify-content: center;
+	align-items: center;
+
+	z-index: 100;
+}
+
+.image-sides {
+	position: absolute;
+    top: 50%;
+	left: 50%;
+    translate: -50% -50%;
+    max-height: 100vh;
+    width: 100%;
+
+	background: url("./../images/bgkray.jpg") repeat-x center;
+	background-size: contain;
+}
+
+.image-side {
+	max-height: 100vh;
+	width: auto;
+	margin: 0 auto;
+}
+
+.evopath {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    max-height: 80%;
+    width: 92%;
+    & > path {
+        stroke: rgba($color: #FFF, $alpha: 0.75);
+        filter: drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.5)); 
+        stroke-dashoffset: 700;
+        stroke-dasharray: 15;
+        
+        animation: draw 20s linear infinite;
+        
+    }
+}
+
+.steplist {
+		position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	translate: -50% -50%;
+    	height: 1516px;
+		width: 2048px;
+		max-height: 100vh;
+		max-width: 100vw;
+}
+
+@keyframes draw {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}

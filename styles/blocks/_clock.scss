@@ -1,0 +1,315 @@
+
+.select-time {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    top: 50%;
+    left: 85%;
+
+	
+	--translateY: -310%;
+	transform: translateY(var(--translateY));
+	
+	width: 10%;
+	aspect-ratio: 1;
+	border-radius: 50%;
+
+	// box-shadow: 0 0 1vh 0.5vh #1684ba;
+	box-shadow: 0 0 1vh 0.5vh #ffe500;
+	background: #fff url("./../images/time.png") center / 95%;
+	z-index: 100;
+
+	// animation: pulse 1s ease-out infinite;
+  	transition-duration: var(--transition-duration);
+
+
+  &:hover {
+	animation-play-state: paused;
+	
+	// --translateY: -280%;
+	// transform: translateY(-280%);
+	width: 10.1%;
+	left: 84.9%;
+	// width: 13%;
+	box-shadow: 0 0 6vh 2vh #ffe500;
+	background-color: #faf7c0;
+  }
+  
+
+	&__text {
+		font-family: var(--font-family-main);
+		font-size: clamp(1px, 43/1516 * 100vh, 43px);
+		text-transform: uppercase;
+		text-align: center;
+		z-index: 101;
+		
+		@include tablet {
+			font-size: clamp(1px, 42/2048 * 100vw, 42px);
+		}
+
+		// animation: pulse 1s linear infinite;
+	}
+}
+
+
+// .clock {
+//     box-shadow: inset 0 0 0 0.02em #580202;
+//     display: inline-block;
+//     border-radius:50%;
+//     position: relative;
+//     font-size: 133px;
+//     overflow: hidden;
+
+//     width: 100%;
+// 	height: 100%;
+
+
+// }
+// .clock::after {
+//     content: '';
+//     background-color: #fff;
+//     border-radius: 0.5em;
+//     margin-left: -0.5em;
+//     margin-top: -0.5em;
+//     position: absolute;
+//     font-size: 0.01em;
+//     display: block;
+//     height: 1em;
+//     width: 1em;
+//     left: 50%;
+//     top: 50%;
+// 	z-index: 100;
+// }
+// .clock__hand-container, .clock__hand, .clock__stroke {
+//     margin-left: -0.5em;
+//     margin-top: -0.5em;
+//     font-size: inherit;
+//     position: absolute;
+//     display: block;
+//     height: 1em;
+//     width: 1em;
+//     left: 50%;
+//     top: 50%;
+// }
+// .clock__stroke::after {
+//     content: "";
+//     border-radius: 0 0 0.02em 0.02em;
+//     background-color: #000;
+//     margin-left: -0.01em;
+//     position: absolute;
+//     display: block;
+//     height: 0.05em;
+//     width: 0.02em;
+//     top: 0.02em;
+//     left: 50%;
+// }
+// .clock__stroke--small::after {
+//     content: "";
+//     border-radius: 0 0 0.0125em 0.0125em;
+//     height: 0.025em;
+//     width: 0.015em;
+// }
+
+// .clock__stroke--5 {
+//     transform: rotate(30deg);
+// }
+
+// .clock__stroke--10 {
+//     transform: rotate(60deg);
+// }
+
+// .clock__stroke--15 {
+//     transform: rotate(90deg);
+// }
+
+// .clock__stroke--20 {
+//     transform: rotate(120deg);
+// }
+
+// .clock__stroke--25 {
+//     transform: rotate(150deg);
+// }
+
+// .clock__stroke--30 {
+//     transform: rotate(180deg);
+// }
+
+// .clock__stroke--35 {
+//     transform: rotate(210deg);
+// }
+
+// .clock__stroke--40 {
+//     transform: rotate(240deg);
+// }
+
+// .clock__stroke--45 {
+//     transform: rotate(270deg);
+// }
+
+// .clock__stroke--50 {
+//     transform: rotate(300deg);
+// }
+
+// .clock__stroke--55 {
+//     transform: rotate(330deg);
+// }
+
+// .clock__hand--hour::after {
+//     content: "";
+//     border-radius: 0.015em 0.015em 0.01em 0.01em;
+//     background-color: #000;
+//     margin-bottom: -0.02em;
+//     margin-left: -0.025em;
+//     font-size: inherit;
+//     position: absolute;
+//     display: block;
+//     height: 0.25em;
+//     width: 0.05em;
+//     bottom: 50%;
+//     left: 50%;
+// }
+
+// .clock__hand--minute::after {
+//     content: "";
+//     border-radius: 0.012em 0.012em 0.01em 0.01em;
+//     background-color: #000;
+//     margin-bottom: -0.02em;
+//     margin-left: -0.015em;
+//     font-size: inherit;
+//     position: absolute;
+//     display: block;
+//     height: 0.4em;
+//     width: 0.03em;
+//     bottom: 50%;
+//     left: 50%;
+// }
+// .clock__hand--second::after {
+//     content: "";
+//     border-radius: 0.01em 0.01em 0.005em 0.005em;
+//     background-color: #f00;
+//     margin-bottom: -0.02em;
+//     margin-left: -0.005em;
+//     font-size: inherit;
+//     position: absolute;
+//     display: block;
+//     height: 0.46em;
+//     width: 0.01em;
+//     bottom: 50%;
+//     left: 50%;
+// }
+
+
+.clock {  
+  --clock-diameter:98%;
+  --clock-border-width: 2px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: 100;
+
+  width: var(--clock-diameter);
+  height: var(--clock-diameter);
+  margin: auto;
+  
+  border: var(--clock-border-width) solid #fcfb22;
+  border-radius: 50%;
+//   background-color: #FFF;
+
+//   box-shadow: 0 0 1vh 0.5vh #ffe500;
+
+  font-size: 0;
+
+
+
+  
+ 
+}
+
+.clock__hand {
+  --hand-width: 1%;
+  --hand-height: 50%;
+  
+  position: absolute;
+  top: calc(50% - var(--hand-height));
+  left: calc(50% - calc(var(--hand-width) / 2));
+
+  width: var(--hand-width);
+  height: var(--hand-height);
+
+  background-color: var(--hand-color, #003676);
+  border-radius: 2px;
+  transform: rotate(var(--turn, 0turn));
+  transform-origin: 50% 100%;
+}
+
+.clock__hand--hour {
+  --hand-width: 4.5%;
+  --hand-height: 30%;
+  
+  --hours-in-day-half: 12;
+  --hours-turn: calc(1turn * var(--hours) / var(--hours-in-day-half)); 
+  
+  --min-in-hour: 60;
+  --minutes-turn: calc((1 / var(--hours-in-day-half)) * 1turn * var(--minutes) / var(--min-in-hour));
+  
+  --turn: calc(var(--hours-turn) + var(--minutes-turn));
+}
+
+.clock__hand--minute {
+  --hand-width: 3%;
+  --hand-height: 40%;
+  
+  --minutes-in-hour: 60;
+  --turn: calc(1turn * var(--minutes) / var(--minutes-in-hour));
+}
+
+.clock__hand--second {
+  --hand-width: 2%;
+  --hand-height: 45%;
+  --hand-color: red;
+  
+  --seconds-in-minute: 60;  
+  --turn: calc(1turn * var(--seconds) / var(--seconds-in-minute));
+}
+
+.clock__face {
+  --face-padding: 10%;
+  
+  position: absolute;
+  top: calc(var(--face-padding) * -1);
+  left: calc(var(--face-padding) * -1);
+
+  width: var(--clock-diameter);
+  height: var(--clock-diameter);
+  padding: var(--face-padding);
+}
+
+.clock__face-stroke {
+  --pi: 3.14159;
+  --radius: calc(var(--clock-diameter) / 2);
+  --mark: 1;
+  --gap: calc(calc(var(--pi) * var(--radius) / 6) - var(--mark));
+
+  fill: none;
+  stroke: #003676;
+  stroke-width: 10%;
+  cx: var(--radius);
+  cy: var(--radius); 
+  r: var(--radius);
+  stroke-dasharray: var(--mark) var(--gap);
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateY(var(--translateY));
+  }
+  100% {
+    
+	transform: translateY(var(--translateY)) scale(1.05);
+  }
+}
